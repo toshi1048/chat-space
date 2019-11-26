@@ -1,5 +1,6 @@
 ## DBの設計
 
+## users table
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false, index: true|
