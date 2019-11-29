@@ -33,6 +33,13 @@ README
 |name|string|index:true,unique:true|
 |mail|string|null:false|
 
+### Association
+- has_many :groups,through:groups_users
+- has_many :messages
+- has_many :groups_users
+
+
+
 ## groups table
 |Column|Type|Options|
 |------|----|-------|
