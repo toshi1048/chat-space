@@ -20,7 +20,7 @@ $(function(){
       `</div>`
     } else if (message.content) {
       //同様に、data-idが反映されるようにしている
-      var html = `<div class="message" data-id=` + message.id + `>` +
+      var html = `<div class="message" data-id=` message.id + `>` +
         `<div class="upper-message">` +
           `<div class="upper-message__user-name">` +
             message.user_name +
