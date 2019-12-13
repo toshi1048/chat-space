@@ -2,7 +2,7 @@ $(function(){
   var buildHTML = function(message) {
     if (message.content && message.image) {
       //data-idが反映されるようにしている
-      var html = `<div class="message" data-id=` + message.id + `>` +
+      var html = `<div class="message" data-id=` message.id `>` 
         `<div class="upper-message">` +
           `<div class="upper-message__user-name">` +
             message.user_name +
@@ -20,7 +20,7 @@ $(function(){
       `</div>`
     } else if (message.content) {
       //同様に、data-idが反映されるようにしている
-      var html = `<div class="message" data-id=` message.id + `>` +
+      var html = `<div class="message" data-id=`+ message.id +`>` +
         `<div class="upper-message">` +
           `<div class="upper-message__user-name">` +
             message.user_name +
@@ -37,7 +37,7 @@ $(function(){
       `</div>`
     } else if (message.image) {
       //同様に、data-idが反映されるようにしている
-      var html = `<div class="message" data-id=` + message.id + `>` +
+      var html = `<div class="message" data-id=`+ message.id + `>` +
         `<div class="upper-message">` +
           `<div class="upper-message__user-name">` +
             message.user_name +
@@ -58,7 +58,6 @@ $('.new_message').on('submit', function(e){
  e.preventDefault();
  var formData = new FormData(this);
  var url = $(this).attr('action')
- console.log(1)
  $.ajax({
    url: url,
    type: "POST",
@@ -108,7 +107,7 @@ $('.new_message').on('submit', function(e){
     // $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight});
   // })
   .fail(function() {
-    console.log('error');
+    alert('error');
   });
 };
 setInterval(reloadMessages, 7000);
