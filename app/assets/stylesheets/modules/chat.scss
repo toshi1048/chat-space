@@ -37,7 +37,10 @@
     background-color: #FAFAFA;
     box-sizing: border-box;
     padding: 46px 40px 0;
-    height: calc(100% - 100px - 90px);
+    height: calc(100vh - 100px - 90px);
+    overflow: scroll;
+    position: relative;
+    padding-bottom: 90px;
     .message {
       .upper-message {
         display: flex;
@@ -85,6 +88,10 @@
       }
       .hidden {
         display: none;
+      }
+      .footer{
+        position: absolute;/*←絶対位置*/
+          bottom: 0; /*下に固定*/
       }
     }
     &__submit {
